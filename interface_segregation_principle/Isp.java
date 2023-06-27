@@ -5,11 +5,16 @@ public class Isp {
 
         Document d = new Document("My rules my world", "There was a legend living in the world");
         
+        System.out.println("\nNot following the Interface segregation principle(ISP)");
         //Here this machine can't use the scan and fax functionality. But it is forcfully implementing and throwing the exception
         //Which is not the good practice, to solve this kind of problems. let's segregate the interface.
         OldPrinterMachine oPM = new OldPrinterMachine();
         oPM.print(d);
 
+        System.out.println("\n\n");
+
+
+        System.out.println("Following the Interface segregation principle(ISP)");
         /*
         * It is just a printer so it has the only functionality to print the document. Thats why it is only implementing the Printer interface
         * and following the interface segregation principle. Inspite of implemting the Machine interface, we segregated the functionalities in to
