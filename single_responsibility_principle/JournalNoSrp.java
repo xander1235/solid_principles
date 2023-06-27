@@ -6,6 +6,9 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
+//1 -> If we want to save the data in different type like db or cloud, we need to change in this class
+//2 -> If we want to change the load functionality, we need to again change in this class
+//3 -> save and load are not the Journal's responsibilities. If we are doing so then it is violiting the SRP rules
 public class JournalNoSrp {
 
     private List<String> entries = new ArrayList<>();
@@ -24,6 +27,7 @@ public class JournalNoSrp {
     public String toString() {
         return String.join(System.lineSeparator(), entries);
     }
+    
     
     public void save(String filename) throws FileNotFoundException {
         try (PrintStream out = new PrintStream(filename)) {
