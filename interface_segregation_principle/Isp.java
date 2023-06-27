@@ -27,5 +27,15 @@ public class Isp {
         photocopier.scan(d);
         photocopier.print(d);
 
+        /*
+         * We can also create an interface by extending other interfaces
+         * interface MultiFunctionDevice extends Printer, Scanner {}
+         * 
+         * While implemting the MultiFunctionDevice, the sub class can also use the already implemted Printer and Scanner
+         * according to the usage
+         * 
+         * 
+         */
+
     }
 }
